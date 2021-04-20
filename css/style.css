@@ -1,0 +1,43 @@
+/* COMMON
+   ======================= */
+
+/* ======================= */
+
+/* MACRO LAYOUT
+   ======================= */
+.container {
+   position: relative;
+}
+/* ======================= */
+
+/* MICRO LAYOUT
+   ======================= */
+[class*="chevron"] {
+   padding: 15px;
+   font-size: 3rem
+}
+   .images {
+      width: 60%;
+   }
+   .images img {
+      height: 300px;
+   }
+.circles {
+   position: absolute;
+   left: 50%;
+   transform: translateX(-50%);
+   bottom: 0;
+   justify-content: space-around;
+   background: rgba(0,0,0,0.6);
+   color: white;
+   padding: 20px;
+   border-radius: 999px;
+}
+.circles i  {
+   padding: 10px;
+}
+.circles i.active {
+   color: blue;
+
+}
+/* ======================= */
