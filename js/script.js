@@ -1,14 +1,13 @@
 var app = new Vue({
   el: '#root',
   data: {
-   test: 'ciao',
    currentImage: 0,
    carouselImages: [
      'campagna.jpg',
      'cascate.webp',
      'fiori.jpeg',
      'montagne.webp'
-   ]
+   ],
   },
   methods: {
     slideRight() {
@@ -18,11 +17,18 @@ var app = new Vue({
     slideLeft() {
       const next = this.currentImage === 0 ? this.carouselImages.length - 1 : this.currentImage - 1;
       this.currentImage = next;
+    },
+    resetTimer() {
+      clearInterval(timer);
+      timer = setInterval(() => {
+        this.slideRight()
+      }, 5000)
     }
   },
   created() {
-    setInterval(() => {
+   timer = 
+   setInterval(() => {
       this.slideRight()
-    }, 3000)
+    }, 5000)
   }
 })
