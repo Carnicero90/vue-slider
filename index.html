@@ -21,7 +21,7 @@
                 </div>
                 <div @click="slideRight()"><i class="fas fa-chevron-right"></i></div>
             </div>
-            <div class="circles flexer around">
+            <div class="circles">
                 <i v-for="image, index in carouselImages" @click="currentImage = index" v-bind:class="{ active: index===currentImage }" class="fas fa-circle"></i>
             </div>
 
