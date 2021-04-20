@@ -22,8 +22,7 @@
                 <div @click="slideRight()"><i class="fas fa-chevron-right"></i></div>
             </div>
             <div class="circles">
-                <!-- TEST -->
-                <i v-for="image, index in carouselImages" @click="() => {currentImage = index; resetTimer()}" v-bind:class="{ active: index===currentImage }" class="fas fa-circle"></i>
+                <i v-for="image, index in carouselImages" @click="selectImage(index)" v-bind:class="{ active: index===currentImage }" class="fas fa-circle"></i>
             </div>
 
         </div>

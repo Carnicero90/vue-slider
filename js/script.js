@@ -18,17 +18,13 @@ var app = new Vue({
       const next = this.currentImage === 0 ? this.carouselImages.length - 1 : this.currentImage - 1;
       this.currentImage = next;
     },
-    resetTimer() {
-      clearInterval(timer);
-      timer = setInterval(() => {
-        this.slideRight()
-      }, 5000)
+    selectImage(index)  {
+     this.currentImage = index;
     }
   },
   created() {
-   timer = 
    setInterval(() => {
       this.slideRight()
-    }, 5000)
+    }, 3000)
   }
 })
